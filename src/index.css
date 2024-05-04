@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ul a.active{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0px 0px 8px 0px;
+    border-bottom: 2px solid #FF3811;
+    margin: 0px 8px;
+}
