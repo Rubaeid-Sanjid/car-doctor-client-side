@@ -9,7 +9,7 @@ const Footer = () => {
             Edwin Diaz is a software and web technologies engineer, <br /> a life coach
             trainer who is also a serial .
           </p>
-          <nav className="grid grid-cols-3 gap-4">
+          <nav className="grid grid-cols-3 gap-4 mt-3">
             <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
