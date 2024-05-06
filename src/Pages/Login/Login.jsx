@@ -1,6 +1,13 @@
+import { useContext } from "react";
 import loginPic from "../../assets/images/login/login.svg";
+import { AuthContext } from "../../Component/AuthProvider/AuthProvider";
 
 const Login = () => {
+
+    const {name} = useContext(AuthContext);
+
+    console.log(name);
+
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
