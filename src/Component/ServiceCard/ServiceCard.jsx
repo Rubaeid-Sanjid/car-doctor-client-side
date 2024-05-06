@@ -1,24 +1,27 @@
-const ServiceCard = () => {
+import PropTypes from 'prop-types';
+
+const ServiceCard = ({service}) => {
+    const {img, title, price} = service;
   return (
     <div>
       <div className="card bg-base-100 shadow-xl">
-        <figure className="px-8 pt-8">
+        <figure className="px-3 pt-3 h-56">
           <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-            className="rounded-xl"
+            src={img}
+            alt=""
+            className="rounded-xl h-full"
           />
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
+          <h2 className="card-title">{title}</h2>
+          <h3 className="text-[#FF3811] text-xl font-bold mb-4">Price: ${price}</h3>
         </div>
       </div>
     </div>
   );
 };
 
+ServiceCard.propTypes = {
+    service: PropTypes.object,
+}
 export default ServiceCard;
