@@ -12,7 +12,7 @@ const SignUp = () => {
 
         const email = e.target.email.value;
         const password = e.target.password.value;
-console.log(email, password);
+
         createUser(email, password)
         .then(result => {
             console.log(result.user);

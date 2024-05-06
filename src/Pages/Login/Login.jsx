@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {loginUser} = useContext(AuthContext);
 
     const handleLogin = (e)=>{
         e.preventDefault();
@@ -13,13 +13,13 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        // createUser(email, password)
-        // .then(result => {
-        //     console.log(result.data);
-        // })
-        // .catch(err=>{
-        //     console.log(err.message);
-        // })
+        loginUser(email, password)
+        .then(result => {
+            console.log(result.user);
+        })
+        .catch(err=>{
+            console.log(err.message);
+        })
     }
 
   return (
