@@ -3,36 +3,36 @@ import loginPic from "../../assets/images/login/login.svg";
 import { AuthContext } from "../../Component/AuthProvider/AuthProvider";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const SignUp = () => {
 
     const {createUser} = useContext(AuthContext);
 
-    const handleLogin = (e)=>{
+    const handleSignUp = (e)=>{
         e.preventDefault();
 
         const email = e.target.email.value;
         const password = e.target.password.value;
-
-        // createUser(email, password)
-        // .then(result => {
-        //     console.log(result.data);
-        // })
-        // .catch(err=>{
-        //     console.log(err.message);
-        // })
+console.log(email, password);
+        createUser(email, password)
+        .then(result => {
+            console.log(result.user);
+        })
+        .catch(err=>{
+            console.log(err.message);
+        })
     }
 
-  return (
-    <div>
+    return (
+        <div>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content">
           <div className="text-center lg:text-left w-1/2 mr-6">
             <img src={loginPic} alt="" />
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleLogin} className="card-body">
+            <form onSubmit={handleSignUp} className="card-body">
               <h1 className="text-3xl lg:text-5xl font-bold text-center">
-                Login
+              Sign Up
               </h1>
               <div className="form-control">
                 <label className="label">
@@ -64,15 +64,15 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-[#FF3811] text-white">Login</button>
+                <button className="btn bg-[#FF3811] text-white">Sign Up</button>
               </div>
-              <h4>New to here ? <Link to={"/signup"}>Sign Up</Link></h4>
+              <h4>Already have an account ? <Link to={"/login"}>Login</Link></h4>
             </form>
           </div>
         </div>
       </div>
     </div>
-  );
+    );
 };
 
-export default Login;
+export default SignUp;
