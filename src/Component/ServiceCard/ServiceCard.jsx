@@ -12,7 +12,7 @@ const ServiceCard = ({service}) => {
             className="rounded-xl h-full"
           />
         </figure>
-        <div className="card-body items-center text-center">
+        <div className="card-body">
           <h2 className="card-title">{title}</h2>
           <h3 className="text-[#FF3811] text-xl font-bold mb-4">Price: ${price}</h3>
         </div>

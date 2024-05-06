@@ -22,7 +22,7 @@ const Services = () => {
         </h2>
         <p>
           the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.{" "}
+          humour, or randomised words which do not look even slightly believable.
         </p>
       </div>
 
